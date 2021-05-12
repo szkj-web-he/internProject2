@@ -1,0 +1,88 @@
+@import "../../Constant/color.scss";
+@import "../../Constant/font.scss";
+
+.component_main__wrap {
+    width: 100%;
+    height: 100%;
+
+    .component_main__tableRequirement {
+        width: 100%;
+        padding: 2rem 4rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        input {
+            width: 25rem;
+            height: 3.2rem;
+            border-radius: 0.4rem;
+            border: 0.1rem solid #ccc;
+            padding: 0 1rem;
+        }
+        button {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            &.component_main__add {
+                width: 7rem;
+                margin: 0 1.5rem;
+                height: 3.2rem;
+                border-radius: 0.4rem;
+                background-color: rgba(0, 125, 125, 0.1);
+            }
+            &.component_main__remove {
+                width: 7rem;
+                height: 3.2rem;
+                border-radius: 0.4rem;
+                background-color: rgba(125, 0, 0, 0.2);
+            }
+        }
+    }
+    .component_main__tableContent {
+        width: 100%;
+        ul {
+            list-style: none;
+            width: 100%;
+            height: 4rem;
+            padding: 0 2rem;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            &:hover {
+                background-color: rgba(0, 255, 255, 0.3);
+            }
+            li {
+                list-style: none;
+                text-align: left;
+                &.component_main__check {
+                    width: 5rem;
+                    height: 100%;
+                    background-image: url("../../Assets/Images/spr_uncheck.png");
+                    background-repeat: no-repeat;
+                    background-position: center left;
+                    background-color: transparent;
+                    cursor: pointer;
+                    &.component_main__active {
+                        background-image: url("../../Assets/Images/spr_check.png");
+                    }
+                }
+                input {
+                    height: 100%;
+                    width: 22rem;
+                    border: 0;
+                    outline: none;
+                    background-color: transparent;
+                    font-size: 1em;
+                }
+                div {
+                    min-width: 10rem;
+                    min-height: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
