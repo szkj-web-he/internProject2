@@ -1,3 +1,10 @@
+/**
+ * @file actions file  指定 to saga,to Redux的 actionType
+ * @date 2021/05/12
+ * @author xuejie.he
+ * @lastModify xuejie.he 2021/05/12 17:21
+ */
+
 export default {
     moduleA: {
         remove: {

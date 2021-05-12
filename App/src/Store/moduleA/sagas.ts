@@ -1,3 +1,10 @@
+/**
+ * @file sagas
+ * @date 2021/05/12 17:16
+ * @author xuejie.he
+ * @lastModify xuejie.he 2021/05/12 17:16
+ */
+
 import { takeEvery, throttle, put, select, fork } from "redux-saga/effects";
 import {
     addTodo,
@@ -67,6 +74,7 @@ function* allSagas() {
     // 反选  可输入行
     yield takeEvery(actionTypes.moduleA.toggleInput.saga, handlerToggleInput);
 
+    // 监听 改变item事件
     yield takeEvery(actionTypes.moduleA.changeItem.saga, handlerChangeItem);
 }
 // 启线程 单独跑

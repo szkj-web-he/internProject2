@@ -1,5 +1,5 @@
 /**
- * @file
+ * @file view file
  * @date 2020-12-01
  * @author xuejie.he
  * @lastModify  2020-12-01
@@ -7,7 +7,7 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, Dispatch } from 'react';
 import "./style.scss";
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../Store/rootReducer"
@@ -20,10 +20,31 @@ import { ItemData, ListInput } from "./custom-type";
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const HomePage = (): JSX.Element => {
     /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
-
-    const dispatch = useDispatch();
+    /**
+     * saga 触发器
+     * @const 
+     * @type {Dispatch<any>}
+     */
+    const dispatch: Dispatch<any> = useDispatch();
+    /**
+     * 最上方 输入框
+     * @const 
+     * @type {React.MutableRefObject<null | HTMLInputElement>}
+     */
     const inputEl: React.MutableRefObject<null | HTMLInputElement> = useRef(null);
+
+    /**
+     * list input输入框
+     * @const 
+     * @type {React.MutableRefObject<ListInput | null>}
+     */
     const liIpt: React.MutableRefObject<ListInput | null> = useRef(null);
+
+    /**
+    * todo list
+    * @const 
+    * @type {ItemData[]}
+    */
     const list: ItemData[] = useSelector((state: RootState) => state.todoList);
     /************* This section will include this component HOOK function *************/
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
